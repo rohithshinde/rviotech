@@ -1,0 +1,509 @@
+/* ==========================================================
+   RVIOTECH — INDUSTRIES PAGE
+========================================================== */
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.industries-hero {
+    min-height: 72vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.industries-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.025) 50%,
+            transparent 100%
+        );
+
+    pointer-events: none;
+}
+
+.industries-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 950px;
+}
+
+.industries-hero-text {
+    max-width: 720px;
+
+    margin-top: 28px;
+
+    font-size: clamp(
+        1.05rem,
+        1.8vw,
+        1.35rem
+    );
+
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+
+/* ==========================================================
+   INDUSTRIES SECTION
+========================================================== */
+
+.industries-section {
+    padding-top: 110px;
+    padding-bottom: 130px;
+}
+
+
+
+/* ==========================================================
+   INDUSTRY GRID
+========================================================== */
+
+.industries-grid {
+    margin-top: 65px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+
+/* ==========================================================
+   INDUSTRY CARD
+========================================================== */
+
+.industry-card {
+    position: relative;
+
+    min-height: 340px;
+
+    padding: 34px;
+
+    background: #0b0d0e;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.45s ease,
+        background 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+
+
+/* ==========================================================
+   TECHNICAL GRID
+========================================================== */
+
+.industry-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 36px 36px;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+
+    pointer-events: none;
+}
+
+
+
+/* ==========================================================
+   TOP ACCENT
+========================================================== */
+
+.industry-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #b6ff00;
+
+    transition:
+        width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.industry-card:hover {
+    transform: translateY(-9px);
+
+    background: #101314;
+
+    border-color: rgba(182, 255, 0, 0.28);
+
+    box-shadow:
+        0 22px 65px rgba(0, 0, 0, 0.38);
+}
+
+.industry-card:hover::before {
+    opacity: 1;
+}
+
+.industry-card:hover::after {
+    width: 100%;
+}
+
+
+
+/* ==========================================================
+   TOP ROW
+========================================================== */
+
+.industry-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.industry-number {
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    color: #b6ff00;
+}
+
+.industry-arrow {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    color: rgba(255, 255, 255, 0.45);
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease;
+}
+
+.industry-card:hover .industry-arrow {
+    transform: translate(
+        3px,
+        -3px
+    );
+
+    color: #b6ff00;
+
+    border-color: rgba(182, 255, 0, 0.45);
+
+    background: rgba(182, 255, 0, 0.05);
+}
+
+
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+.industry-main {
+    position: relative;
+    z-index: 2;
+
+    margin-top: auto;
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.industry-card:hover .industry-main {
+    transform: translateY(-7px);
+}
+
+.industry-main h2 {
+    margin: 0;
+
+    max-width: 600px;
+
+    font-size: clamp(
+        1.3rem,
+        2vw,
+        1.7rem
+    );
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    letter-spacing: -0.025em;
+}
+
+.industry-main p {
+    max-width: 540px;
+
+    margin-top: 16px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+}
+
+
+
+/* ==========================================================
+   DETAILS
+========================================================== */
+
+.industry-details {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    opacity: 0;
+
+    transform: translateY(24px);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        max-height 0.5s ease;
+}
+
+.industry-card:hover .industry-details {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    max-height: 160px;
+}
+
+
+
+/* ==========================================================
+   DETAILS TITLE
+========================================================== */
+
+.industry-detail-title {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #b6ff00;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+}
+
+
+
+/* ==========================================================
+   TAGS
+========================================================== */
+
+.industry-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.industry-tags span {
+    padding: 6px 9px;
+
+    border: 1px solid rgba(255, 255, 255, 0.11);
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.66rem;
+
+    font-weight: 500;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.industry-card:hover .industry-tags span {
+    border-color: rgba(
+        182,
+        255,
+        0,
+        0.16
+    );
+}
+
+.industry-card:hover .industry-tags span:hover {
+    color: #b6ff00;
+
+    border-color: rgba(
+        182,
+        255,
+        0,
+        0.45
+    );
+}
+
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.industries-cta {
+    padding-top: 130px;
+    padding-bottom: 150px;
+
+    border-top: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+}
+
+.industries-cta .rv-text {
+    max-width: 650px;
+
+    margin-top: 20px;
+}
+
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .industries-hero {
+        min-height: 65vh;
+    }
+
+    .industries-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .industries-hero {
+        min-height: 70vh;
+    }
+
+    .industries-section {
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
+
+    .industries-grid {
+        margin-top: 45px;
+
+        gap: 14px;
+    }
+
+    .industry-card {
+        min-height: 310px;
+
+        padding: 28px 24px;
+    }
+
+    /*
+       Touch devices do not have hover.
+       Keep the useful information visible.
+    */
+
+    .industry-details {
+        opacity: 1;
+
+        transform: none;
+
+        max-height: 160px;
+    }
+
+    .industry-main {
+        transform: none !important;
+    }
+
+    .industries-cta {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+
+}

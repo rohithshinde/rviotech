@@ -1,0 +1,483 @@
+/* ==========================================================
+   RVIOTECH — SERVICES PAGE
+   Page-specific styles only.
+   Shared styles remain in common.css
+========================================================== */
+
+
+/* ==========================================================
+   SERVICES HERO
+========================================================== */
+
+.services-hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.025) 50%,
+            transparent 100%
+        );
+    pointer-events: none;
+}
+
+.services-hero-content {
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+}
+
+.services-hero-tagline {
+    margin-top: 28px;
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    line-height: 1.5;
+    font-weight: 500;
+    max-width: 760px;
+}
+
+.services-hero-description {
+    margin-top: 20px;
+    max-width: 720px;
+}
+
+
+
+/* ==========================================================
+   SERVICES INTRO
+========================================================== */
+
+.services-intro {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.services-intro-text {
+    max-width: 780px;
+    margin-top: 25px;
+}
+
+
+
+/* ==========================================================
+   SERVICES LIST
+========================================================== */
+
+.services-list {
+    padding-top: 120px;
+    padding-bottom: 130px;
+}
+
+.services-list > .rv-container > .rv-heading-lg {
+    max-width: 850px;
+}
+
+
+
+/* ==========================================================
+   SERVICES GRID
+========================================================== */
+
+.services-grid {
+    margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 1px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+
+/* ==========================================================
+   SERVICE CARD
+========================================================== */
+
+.service-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 42px;
+
+    background: #0b0d0e;
+
+    display: flex;
+
+    gap: 28px;
+
+    overflow: hidden;
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #b6ff00;
+
+    transition: width 0.45s ease;
+}
+
+.service-card:hover {
+    background: #101314;
+}
+
+.service-card:hover::before {
+    width: 100%;
+}
+
+
+
+/* ==========================================================
+   SERVICE NUMBER
+========================================================== */
+
+.service-number {
+    flex: 0 0 auto;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color: #b6ff00;
+
+    padding-top: 5px;
+}
+
+
+
+/* ==========================================================
+   SERVICE CONTENT
+========================================================== */
+
+.service-content {
+    max-width: 560px;
+}
+
+.service-content h3 {
+    margin: 0;
+
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+}
+
+.service-content p {
+    margin-top: 18px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    line-height: 1.7;
+
+    font-size: 0.95rem;
+}
+
+
+
+/* ==========================================================
+   SERVICE KEYWORDS
+========================================================== */
+
+.service-keywords {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.service-keywords span {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 30px;
+
+    padding: 6px 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+
+    transition:
+        border-color 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+.service-card:hover .service-keywords span {
+    border-color: rgba(182, 255, 0, 0.20);
+}
+
+.service-card:hover .service-keywords span:first-child {
+    color: #b6ff00;
+}
+
+
+
+/* ==========================================================
+   ENGINEERING LIFECYCLE
+========================================================== */
+
+.services-lifecycle {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.services-lifecycle .rv-heading-lg {
+    max-width: 850px;
+}
+
+
+
+/* ==========================================================
+   LIFECYCLE FLOW
+========================================================== */
+
+.services-lifecycle-line {
+    margin-top: 80px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+
+
+/* ==========================================================
+   LIFECYCLE STEP
+========================================================== */
+
+.lifecycle-step {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    width: 170px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.lifecycle-step span {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(182, 255, 0, 0.5);
+
+    color: #b6ff00;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+}
+
+.lifecycle-step strong {
+    margin-top: 10px;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 0.04em;
+}
+
+.lifecycle-step small {
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 0.75rem;
+
+    line-height: 1.5;
+}
+
+
+
+/* ==========================================================
+   LIFECYCLE CONNECTOR
+========================================================== */
+
+.lifecycle-connector {
+    flex: 1;
+
+    height: 1px;
+
+    margin-top: 21px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(182, 255, 0, 0.45),
+            rgba(255, 255, 255, 0.10)
+        );
+
+    position: relative;
+}
+
+.lifecycle-connector::after {
+    content: "→";
+
+    position: absolute;
+
+    right: -5px;
+
+    top: 50%;
+
+    transform: translateY(-58%);
+
+    color: rgba(182, 255, 0, 0.7);
+
+    font-size: 0.8rem;
+}
+
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.services-cta {
+    padding-top: 140px;
+    padding-bottom: 150px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.services-cta .rv-text {
+    max-width: 650px;
+
+    margin-top: 20px;
+}
+
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .services-hero {
+        min-height: 70vh;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-lifecycle-line {
+        overflow-x: auto;
+
+        padding-bottom: 20px;
+
+        scrollbar-width: thin;
+    }
+
+    .lifecycle-step {
+        width: 155px;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .services-hero {
+        min-height: 75vh;
+    }
+
+    .services-intro,
+    .services-list,
+    .services-lifecycle {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .services-cta {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+
+    .services-grid {
+        margin-top: 45px;
+    }
+
+    .service-card {
+        min-height: auto;
+
+        padding: 30px 24px;
+
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+    .service-number {
+        padding-top: 0;
+    }
+
+    .service-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .service-keywords {
+        margin-top: 20px;
+    }
+
+    .services-lifecycle-line {
+        margin-top: 55px;
+    }
+
+}

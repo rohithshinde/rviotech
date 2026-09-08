@@ -1,0 +1,485 @@
+/* ==========================================================
+   RVIOTECH — PRODUCTS PAGE
+   Page-specific styling
+========================================================== */
+
+
+/* ==========================================================
+   PRODUCTS HERO
+========================================================== */
+
+.products-hero {
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.products-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.025) 50%,
+            transparent 100%
+        );
+
+    pointer-events: none;
+}
+
+.products-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+}
+
+.products-hero-tagline {
+    margin-top: 28px;
+
+    max-width: 720px;
+
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
+
+    line-height: 1.5;
+
+    font-weight: 500;
+}
+
+
+
+/* ==========================================================
+   PRODUCTS SECTION
+========================================================== */
+
+.products-section {
+    padding-top: 120px;
+    padding-bottom: 130px;
+}
+
+.products-section .rv-heading-lg {
+    max-width: 850px;
+}
+
+
+
+/* ==========================================================
+   PRODUCTS GRID
+========================================================== */
+
+.products-grid {
+    margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+
+/* ==========================================================
+   PRODUCT CARD
+========================================================== */
+
+.product-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 34px;
+
+    background: #0b0d0e;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: default;
+
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.45s ease,
+        background 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+
+
+/* subtle grid inside card */
+
+.product-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 35px 35px;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+
+    pointer-events: none;
+}
+
+
+
+/* green accent line */
+
+.product-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #b6ff00;
+
+    transition:
+        width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+
+/* ==========================================================
+   HOVER STATE
+========================================================== */
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    background: #101314;
+
+    border-color: rgba(182, 255, 0, 0.28);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+.product-card:hover::after {
+    width: 100%;
+}
+
+
+
+/* ==========================================================
+   TOP ROW
+========================================================== */
+
+.product-card-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.product-number {
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color: #b6ff00;
+}
+
+.product-arrow {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 1rem;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease,
+        background 0.4s ease;
+}
+
+.product-card:hover .product-arrow {
+    transform: translate(3px, -3px);
+
+    border-color: rgba(182, 255, 0, 0.45);
+
+    color: #b6ff00;
+
+    background: rgba(182, 255, 0, 0.05);
+}
+
+
+
+/* ==========================================================
+   PRODUCT MAIN CONTENT
+========================================================== */
+
+.product-main {
+    position: relative;
+    z-index: 2;
+
+    margin-top: auto;
+
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-card:hover .product-main {
+    transform: translateY(-8px);
+}
+
+.product-main h3 {
+    margin: 0;
+
+    max-width: 520px;
+
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+}
+
+.product-main p {
+    margin-top: 16px;
+
+    max-width: 500px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+}
+
+
+
+/* ==========================================================
+   APPLICATION PANEL
+========================================================== */
+
+.product-applications {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    opacity: 0;
+
+    transform: translateY(22px);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        max-height 0.5s ease;
+}
+
+.product-card:hover .product-applications {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    max-height: 150px;
+}
+
+
+
+/* ==========================================================
+   APPLICATION TITLE
+========================================================== */
+
+.application-title {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #b6ff00;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+}
+
+
+
+/* ==========================================================
+   APPLICATION LIST
+========================================================== */
+
+.application-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.application-list span {
+    padding: 6px 9px;
+
+    border: 1px solid rgba(255, 255, 255, 0.11);
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.66rem;
+
+    font-weight: 500;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.product-card:hover .application-list span {
+    border-color: rgba(182, 255, 0, 0.16);
+}
+
+.product-card:hover .application-list span:hover {
+    color: #b6ff00;
+
+    border-color: rgba(182, 255, 0, 0.45);
+}
+
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.products-cta {
+    padding-top: 130px;
+    padding-bottom: 150px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.products-cta .rv-text {
+    max-width: 650px;
+
+    margin-top: 20px;
+}
+
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .products-hero {
+        min-height: 65vh;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .products-hero {
+        min-height: 70vh;
+    }
+
+    .products-section {
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
+
+    .products-grid {
+        margin-top: 45px;
+
+        gap: 14px;
+    }
+
+    .product-card {
+        min-height: 300px;
+
+        padding: 28px 24px;
+    }
+
+    /*
+       On touch devices there is no real hover.
+       Keep the applications visible so the
+       information is still accessible.
+    */
+
+    .product-applications {
+        opacity: 1;
+
+        transform: none;
+
+        max-height: 150px;
+    }
+
+    .product-main {
+        transform: none !important;
+    }
+
+    .products-cta {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+
+}

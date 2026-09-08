@@ -1,0 +1,527 @@
+/* ==========================================================
+   RVIOTECH — CONTACT PAGE
+========================================================== */
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.contact-hero {
+    min-height: 68vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.025) 50%,
+            transparent 100%
+        );
+
+    pointer-events: none;
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 950px;
+}
+
+.contact-hero-text {
+    max-width: 680px;
+
+    margin-top: 28px;
+
+    font-size: clamp(
+        1.05rem,
+        1.8vw,
+        1.35rem
+    );
+
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+
+/* ==========================================================
+   CONTACT SECTION
+========================================================== */
+
+.contact-section {
+    padding-top: 100px;
+    padding-bottom: 130px;
+}
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.85fr)
+        minmax(0, 1.15fr);
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+
+
+/* ==========================================================
+   CONTACT INFORMATION
+========================================================== */
+
+.contact-info {
+    position: relative;
+}
+
+.contact-info .rv-heading-md {
+    margin-top: 24px;
+}
+
+.contact-info-text {
+    max-width: 500px;
+
+    margin-top: 22px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 0.95rem;
+
+    line-height: 1.75;
+}
+
+
+
+/* ==========================================================
+   CONTACT DETAILS
+========================================================== */
+
+.contact-details {
+    margin-top: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+}
+
+.contact-detail {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.contact-label {
+    margin-bottom: 2px;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: #b6ff00;
+}
+
+.contact-detail a,
+.contact-detail span:last-child {
+    width: fit-content;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease;
+}
+
+.contact-detail a:hover {
+    color: #b6ff00;
+}
+
+
+
+/* ==========================================================
+   FORM WRAPPER
+========================================================== */
+
+.contact-form-wrapper {
+    position: relative;
+
+    padding: 42px;
+
+    background: #0b0d0e;
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.10
+    );
+
+    overflow: hidden;
+}
+
+.contact-form-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.022) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.022) 1px,
+            transparent 1px
+        );
+
+    background-size: 38px 38px;
+
+    pointer-events: none;
+}
+
+
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.contact-form {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px 20px;
+}
+
+
+
+/* ==========================================================
+   FORM FIELD
+========================================================== */
+
+.form-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.form-field:nth-last-of-type(1) {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.11
+    );
+
+    outline: none;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.035
+    );
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.88
+    );
+
+    font-family: inherit;
+
+    font-size: 0.86rem;
+
+    border-radius: 0;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: rgba(
+        255,
+        255,
+        255,
+        0.30
+    );
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+
+    border-color: rgba(
+        182,
+        255,
+        0,
+        0.55
+    );
+
+    background: rgba(
+        182,
+        255,
+        0,
+        0.025
+    );
+
+    box-shadow:
+        0 0 0 1px rgba(
+            182,
+            255,
+            0,
+            0.08
+        );
+}
+
+
+
+/* ==========================================================
+   SELECT
+========================================================== */
+
+.form-field select {
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+.form-field select option {
+    background: #0b0d0e;
+
+    color: #ffffff;
+}
+
+
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+.form-field textarea {
+    min-height: 150px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+
+/* ==========================================================
+   SUBMIT BUTTON
+========================================================== */
+
+.contact-submit {
+    grid-column: 1 / -1;
+
+    margin-top: 5px;
+
+    width: fit-content;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.contact-submit span {
+    margin-left: 12px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.contact-submit:hover span {
+    transform: translateX(4px);
+}
+
+
+
+/* ==========================================================
+   FORM STATUS
+========================================================== */
+
+.form-status {
+    grid-column: 1 / -1;
+
+    min-height: 20px;
+
+    margin-top: -8px;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.55
+    );
+}
+
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.contact-cta {
+    padding-top: 120px;
+    padding-bottom: 150px;
+
+    border-top: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+}
+
+.contact-cta .rv-text {
+    max-width: 620px;
+
+    margin-top: 20px;
+}
+
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .contact-info-text {
+        max-width: 700px;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .contact-hero {
+        min-height: 65vh;
+    }
+
+    .contact-section {
+        padding-top: 75px;
+        padding-bottom: 90px;
+    }
+
+    .contact-layout {
+        gap: 55px;
+    }
+
+    .contact-details {
+        margin-top: 40px;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .form-field:nth-last-of-type(1) {
+        grid-column: auto;
+    }
+
+    .contact-submit {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+    .form-status {
+        grid-column: auto;
+    }
+
+    .contact-cta {
+        padding-top: 85px;
+        padding-bottom: 100px;
+    }
+
+}

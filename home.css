@@ -1,0 +1,618 @@
+/* ==========================================================
+   RVIOTECH HOME
+   Premium Engineering / Electronics / IoT
+========================================================== */
+
+.rv-hero {
+
+    min-height: calc(100vh - 78px);
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding:
+        70px 0 80px;
+
+}
+
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.rv-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 800px;
+    height: 800px;
+
+    right: -250px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(35, 230, 164, .09),
+            rgba(35, 230, 164, .025) 35%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.rv-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        55px 55px;
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   HERO CONTAINER
+========================================================== */
+
+.rv-hero-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        1500px,
+        calc(100% - 90px)
+    );
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(430px, .85fr)
+        minmax(600px, 1.15fr);
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+/* ==========================================================
+   LEFT CONTENT
+========================================================== */
+
+.rv-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 680px;
+
+}
+
+
+.rv-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    color:
+        #35e3a4;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+
+}
+
+
+.rv-eyebrow::before {
+
+    content: "";
+
+    width: 28px;
+    height: 1px;
+
+    background:
+        #35e3a4;
+
+    box-shadow:
+        0 0 8px rgba(53,227,164,.5);
+
+}
+
+
+/* ==========================================================
+   MAIN HEADLINE
+========================================================== */
+
+.rv-heading-xl {
+
+    margin: 0;
+
+    max-width: 700px;
+
+    color:
+        #f1f4f3;
+
+    font-size:
+        clamp(58px, 5.5vw, 92px);
+
+    line-height:
+        .94;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -.055em;
+
+}
+
+
+.rv-heading-xl span {
+
+    color:
+        rgba(241,244,243,.43);
+
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.rv-hero .rv-text {
+
+    max-width: 610px;
+
+    margin-top: 30px;
+
+    color:
+        rgba(220,228,225,.62);
+
+    font-size:
+        17px;
+
+    line-height:
+        1.7;
+
+    letter-spacing:
+        -.01em;
+
+}
+
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.rv-hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 34px;
+
+}
+
+
+.rv-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding:
+        0 25px;
+
+    border-radius:
+        4px;
+
+    text-decoration: none;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .13em;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.rv-btn-primary {
+
+    color:
+        #04100b;
+
+    background:
+        #35e3a4;
+
+    border:
+        1px solid #35e3a4;
+
+}
+
+
+.rv-btn-primary:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 35px rgba(53,227,164,.18);
+
+}
+
+
+.rv-btn-outline {
+
+    color:
+        #e8edeb;
+
+    background:
+        rgba(255,255,255,.015);
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+}
+
+
+.rv-btn-outline:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(53,227,164,.5);
+
+}
+
+
+/* ==========================================================
+   ANIMATION AREA
+========================================================== */
+
+.rv-hero-animation {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height:
+        570px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.rv-hero-animation::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(53,227,164,.07),
+            transparent 68%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.rv-hero-animation iframe {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        100%;
+
+    height:
+        570px;
+
+    display:
+        block;
+
+    border:
+        none;
+
+    outline:
+        none;
+
+    background:
+        transparent;
+
+}
+
+
+/* ==========================================================
+   SCROLL INDICATOR
+========================================================== */
+
+.rv-scroll {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color:
+        rgba(255,255,255,.3);
+
+    font-size:
+        9px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .18em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.rv-scroll-line {
+
+    width:
+        1px;
+
+    height:
+        38px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #35e3a4,
+            transparent
+        );
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .rv-hero-container {
+
+        grid-template-columns:
+            minmax(400px, .9fr)
+            minmax(480px, 1.1fr);
+
+        gap: 10px;
+
+    }
+
+    .rv-heading-xl {
+
+        font-size:
+            clamp(55px, 5.8vw, 75px);
+
+    }
+
+    .rv-hero-animation {
+
+        min-height:
+            500px;
+
+    }
+
+    .rv-hero-animation iframe {
+
+        height:
+            500px;
+
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .rv-hero {
+
+        padding:
+            70px 0 100px;
+
+    }
+
+    .rv-hero-container {
+
+        grid-template-columns:
+            1fr;
+
+        width:
+            min(
+                700px,
+                calc(100% - 40px)
+            );
+
+    }
+
+    .rv-hero-content {
+
+        max-width:
+            700px;
+
+    }
+
+    .rv-hero-animation {
+
+        min-height:
+            500px;
+
+        margin-top:
+            10px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .rv-hero {
+
+        padding:
+            55px 0 80px;
+
+    }
+
+    .rv-hero-container {
+
+        width:
+            calc(100% - 32px);
+
+    }
+
+    .rv-heading-xl {
+
+        font-size:
+            50px;
+
+    }
+
+    .rv-hero .rv-text {
+
+        font-size:
+            15px;
+
+    }
+
+    .rv-hero-actions {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+    }
+
+    .rv-btn {
+
+        width:
+            100%;
+
+    }
+
+    .rv-hero-animation {
+
+        min-height:
+            400px;
+
+    }
+
+    .rv-hero-animation iframe {
+
+        height:
+            400px;
+
+    }
+
+}
