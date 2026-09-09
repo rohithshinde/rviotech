@@ -87,3 +87,97 @@ if (revealElements.length) {
     );
 
 }
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+const menuToggle =
+    document.querySelector(".rv-menu-toggle");
+
+const navLinks =
+    document.querySelector(".rv-nav-links");
+
+if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener("click", () => {
+
+        const isOpen =
+            navLinks.classList.toggle("mobile-open");
+
+        menuToggle.classList.toggle(
+            "active",
+            isOpen
+        );
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
+    });
+
+
+    /* Close menu after selecting a page */
+
+    navLinks.querySelectorAll("a").forEach(
+        (link) => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove(
+                    "mobile-open"
+                );
+
+                menuToggle.classList.remove(
+                    "active"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+            });
+
+        }
+    );
+
+
+    /* Reset menu when returning to desktop */
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth > 800) {
+
+            navLinks.classList.remove(
+                "mobile-open"
+            );
+
+            menuToggle.classList.remove(
+                "active"
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    });
+
+}
