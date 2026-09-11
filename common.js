@@ -5,6 +5,51 @@
 
 
 /* =========================================================
+   GOOGLE ANALYTICS 4
+========================================================= */
+
+(function () {
+
+    const GA_MEASUREMENT_ID = "G-KM7MVBKHQF";
+
+    /* Load Google Analytics */
+
+    const script = document.createElement("script");
+
+    script.async = true;
+
+    script.src =
+        "https://www.googletagmanager.com/gtag/js?id=" +
+        GA_MEASUREMENT_ID;
+
+    document.head.appendChild(script);
+
+
+    /* Initialize GA4 */
+
+    window.dataLayer =
+        window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    window.gtag = gtag;
+
+    gtag(
+        "js",
+        new Date()
+    );
+
+    gtag(
+        "config",
+        GA_MEASUREMENT_ID
+    );
+
+})();
+
+
+/* =========================================================
    NAVBAR SCROLL EFFECT
 ========================================================= */
 
