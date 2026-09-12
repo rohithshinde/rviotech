@@ -12,9 +12,9 @@
 :root {
 
     /* Background */
-    --rv-bg: #050608;
-    --rv-bg-secondary: #080b0f;
-    --rv-bg-card: #0b0f13;
+    --rv-bg: #03100d;
+    --rv-bg-secondary: #061c16;
+    --rv-bg-card: #0b2920;
 
     /* Text */
     --rv-text: #f3f6f8;
