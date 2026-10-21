@@ -1,0 +1,153 @@
+/* About section directly below the homepage hero */
+.home-about {
+    position: relative;
+    padding: 88px 0 94px;
+    background: #080b0f;
+    border-top: 1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.home-about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+    align-items: start;
+    gap: clamp(36px, 6vw, 86px);
+}
+
+.home-about-copy h2 {
+    max-width: 680px;
+    margin: 18px 0 22px;
+    color: #f4f7f8;
+    font-size: clamp(2rem, 3.8vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.045em;
+}
+
+.home-about-copy h2 span {
+    display: block;
+    margin-top: 7px;
+    color: #00d9cf;
+}
+
+.home-about-copy p {
+    max-width: 650px;
+    margin: 0 0 15px;
+    color: rgba(239,244,246,.72);
+    font-size: .98rem;
+    line-height: 1.85;
+}
+
+.home-about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    color: #00e5dc;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-decoration: none;
+    transition: gap .25s ease;
+}
+
+.home-about-link:hover {
+    gap: 15px;
+}
+
+.home-about-link span {
+    font-size: 1.1rem;
+}
+
+.home-about-areas {
+    padding: 27px;
+    border: 1px solid rgba(255,255,255,.11);
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
+}
+
+.home-about-group + .home-about-group {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,.09);
+}
+
+.home-about-group h3 {
+    margin: 0 0 15px;
+    color: rgba(255,255,255,.92);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+
+.home-about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.home-about-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 7px 11px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 5px;
+    background: rgba(255,255,255,.025);
+    color: rgba(239,244,246,.75);
+    font-size: .78rem;
+    line-height: 1.4;
+}
+
+.home-about-signature {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px 20px;
+    margin-top: 28px;
+    color: #00e5dc;
+    font-size: .85rem;
+    font-weight: 800;
+    letter-spacing: .09em;
+}
+
+@media (max-width: 850px) {
+    .home-about {
+        padding: 70px 0;
+    }
+
+    .home-about-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .home-about-copy h2 {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 520px) {
+    .home-about {
+        padding: 54px 0;
+    }
+
+    .home-about-areas {
+        padding: 20px;
+    }
+
+    .home-about-copy h2 {
+        font-size: clamp(1.8rem, 8vw, 2.45rem);
+    }
+
+    .home-about-copy p {
+        font-size: .92rem;
+    }
+
+    .home-about-tags span {
+        font-size: .74rem;
+    }
+
+    .home-about-signature {
+        gap: 8px 14px;
+        font-size: .77rem;
+    }
+}
