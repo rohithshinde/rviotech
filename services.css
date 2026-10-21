@@ -1,483 +1,215 @@
-/* ==========================================================
-   RVIOTECH — SERVICES PAGE
-   Page-specific styles only.
-   Shared styles remain in common.css
-========================================================== */
+/* RVIOTECH Services page — page-specific styles. Shared styles are in common.css. */
 
-
-/* ==========================================================
-   SERVICES HERO
-========================================================== */
-
-.services-hero {
-    min-height: 82vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.services-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(255, 255, 255, 0.025) 50%,
-            transparent 100%
-        );
-    pointer-events: none;
-}
-
-.services-hero-content {
-    max-width: 900px;
-    position: relative;
-    z-index: 2;
-}
-
-.services-hero-tagline {
-    margin-top: 28px;
-    font-size: clamp(1.2rem, 2vw, 1.7rem);
-    line-height: 1.5;
-    font-weight: 500;
-    max-width: 760px;
-}
-
-.services-hero-description {
-    margin-top: 20px;
-    max-width: 720px;
-}
-
-
-
-/* ==========================================================
-   SERVICES INTRO
-========================================================== */
-
-.services-intro {
-    padding-top: 120px;
+.services-list {
+    padding-top: 150px;
     padding-bottom: 120px;
 }
 
+.services-list > .rv-container > .rv-heading-xl {
+    max-width: 900px;
+}
+
 .services-intro-text {
-    max-width: 780px;
-    margin-top: 25px;
+    max-width: 760px;
+    margin-top: 22px;
 }
 
-
-
-/* ==========================================================
-   SERVICES LIST
-========================================================== */
-
-.services-list {
-    padding-top: 120px;
-    padding-bottom: 130px;
-}
-
-.services-list > .rv-container > .rv-heading-lg {
-    max-width: 850px;
-}
-
-
-
-/* ==========================================================
-   SERVICES GRID
-========================================================== */
-
-.services-grid {
-    margin-top: 70px;
-
+.services-category-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 1px;
-
-    background: rgba(255, 255, 255, 0.10);
-
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 58px;
+    background: transparent;
+    border: 0;
 }
 
-
-
-/* ==========================================================
-   SERVICE CARD
-========================================================== */
-
-.service-card {
-    position: relative;
-
-    min-height: 330px;
-
-    padding: 42px;
-
-    background: #0b0d0e;
-
+.service-category-card {
     display: flex;
-
-    gap: 28px;
-
-    overflow: hidden;
-
-    transition:
-        background 0.35s ease,
-        transform 0.35s ease;
-}
-
-.service-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 0;
-    height: 2px;
-
-    background: #b6ff00;
-
-    transition: width 0.45s ease;
-}
-
-.service-card:hover {
-    background: #101314;
-}
-
-.service-card:hover::before {
-    width: 100%;
-}
-
-
-
-/* ==========================================================
-   SERVICE NUMBER
-========================================================== */
-
-.service-number {
-    flex: 0 0 auto;
-
-    font-size: 0.75rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.12em;
-
-    color: #b6ff00;
-
-    padding-top: 5px;
-}
-
-
-
-/* ==========================================================
-   SERVICE CONTENT
-========================================================== */
-
-.service-content {
-    max-width: 560px;
-}
-
-.service-content h3 {
-    margin: 0;
-
-    font-size: clamp(1.25rem, 2vw, 1.65rem);
-
-    line-height: 1.25;
-
-    font-weight: 700;
-
-    letter-spacing: -0.02em;
-}
-
-.service-content p {
-    margin-top: 18px;
-
-    color: rgba(255, 255, 255, 0.65);
-
-    line-height: 1.7;
-
-    font-size: 0.95rem;
-}
-
-
-
-/* ==========================================================
-   SERVICE KEYWORDS
-========================================================== */
-
-.service-keywords {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 25px;
-}
-
-.service-keywords span {
-    display: inline-flex;
-
-    align-items: center;
-
-    min-height: 30px;
-
-    padding: 6px 10px;
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-
-    color: rgba(255, 255, 255, 0.58);
-
-    font-size: 0.68rem;
-
-    font-weight: 600;
-
-    letter-spacing: 0.05em;
-
-    transition:
-        border-color 0.3s ease,
-        color 0.3s ease,
-        background 0.3s ease;
-}
-
-.service-card:hover .service-keywords span {
-    border-color: rgba(182, 255, 0, 0.20);
-}
-
-.service-card:hover .service-keywords span:first-child {
-    color: #b6ff00;
-}
-
-
-
-/* ==========================================================
-   ENGINEERING LIFECYCLE
-========================================================== */
-
-.services-lifecycle {
-    padding-top: 130px;
-    padding-bottom: 130px;
-}
-
-.services-lifecycle .rv-heading-lg {
-    max-width: 850px;
-}
-
-
-
-/* ==========================================================
-   LIFECYCLE FLOW
-========================================================== */
-
-.services-lifecycle-line {
-    margin-top: 80px;
-
-    display: flex;
-
-    align-items: flex-start;
-
-    width: 100%;
-}
-
-
-
-/* ==========================================================
-   LIFECYCLE STEP
-========================================================== */
-
-.lifecycle-step {
-    position: relative;
-
-    flex: 0 0 auto;
-
-    width: 170px;
-
-    display: flex;
-
     flex-direction: column;
-
-    gap: 8px;
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #0b0f13;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    transition: border-color .3s ease, transform .3s ease, background .3s ease;
 }
 
-.lifecycle-step span {
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid rgba(182, 255, 0, 0.5);
-
-    color: #b6ff00;
-
-    font-size: 0.7rem;
-
-    font-weight: 700;
+.service-category-card::before {
+    display: none;
 }
 
-.lifecycle-step strong {
-    margin-top: 10px;
-
-    font-size: 0.9rem;
-
-    letter-spacing: 0.04em;
+.service-category-card:hover {
+    background: #0d1317;
+    border-color: rgba(0, 229, 220, .65);
+    transform: translateY(-4px);
 }
 
-.lifecycle-step small {
-    color: rgba(255, 255, 255, 0.45);
+.service-image-link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #071015;
+}
 
-    font-size: 0.75rem;
+.service-image-link img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s ease;
+}
 
+.service-category-card:hover .service-image-link img {
+    transform: scale(1.035);
+}
+
+.service-category-content {
+    padding: 26px 28px 28px;
+}
+
+.service-category-content .service-number {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 10px;
+    color: #00e5dc;
+    font-size: .78rem;
+    letter-spacing: .12em;
+}
+
+.service-category-content h2 {
+    margin: 0;
+    color: #f5f7f8;
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    line-height: 1.3;
+    letter-spacing: -.025em;
+}
+
+.service-category-content ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 22px;
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.service-category-content li {
+    position: relative;
+    padding: 11px 0 11px 17px;
+    border-bottom: 1px solid rgba(255, 255, 255, .075);
+    color: rgba(255, 255, 255, .72);
+    font-size: .86rem;
     line-height: 1.5;
 }
 
-
-
-/* ==========================================================
-   LIFECYCLE CONNECTOR
-========================================================== */
-
-.lifecycle-connector {
-    flex: 1;
-
-    height: 1px;
-
-    margin-top: 21px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(182, 255, 0, 0.45),
-            rgba(255, 255, 255, 0.10)
-        );
-
-    position: relative;
-}
-
-.lifecycle-connector::after {
-    content: "→";
-
+.service-category-content li::before {
+    content: "";
     position: absolute;
-
-    right: -5px;
-
-    top: 50%;
-
-    transform: translateY(-58%);
-
-    color: rgba(182, 255, 0, 0.7);
-
-    font-size: 0.8rem;
+    left: 0;
+    top: 18px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #00e5dc;
 }
 
+.service-summary {
+    margin: 14px 0 0;
+    color: rgba(255, 255, 255, .68);
+    font-size: .92rem;
+    line-height: 1.7;
+}
 
+.service-explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    color: #00e5dc;
+    font-size: .82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: gap .25s ease, color .25s ease;
+}
 
-/* ==========================================================
-   CTA
-========================================================== */
+.service-explore-link:hover {
+    gap: 15px;
+    color: #8ffff8;
+}
+
+.service-explore-link span {
+    font-size: 1.15rem;
+}
 
 .services-cta {
-    padding-top: 140px;
-    padding-bottom: 150px;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 110px;
+    padding-bottom: 120px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
 }
 
 .services-cta .rv-text {
-    max-width: 650px;
-
+    max-width: 680px;
     margin-top: 20px;
 }
 
-
-
-/* ==========================================================
-   TABLET
-========================================================== */
-
 @media (max-width: 900px) {
-
-    .services-hero {
-        min-height: 70vh;
+    .services-list {
+        padding-top: 125px;
     }
 
-    .services-grid {
+    .services-category-grid {
+        gap: 16px;
+        margin-top: 42px;
+    }
+
+    .service-category-content {
+        padding: 22px;
+    }
+
+    .service-category-content ul {
         grid-template-columns: 1fr;
     }
-
-    .services-lifecycle-line {
-        overflow-x: auto;
-
-        padding-bottom: 20px;
-
-        scrollbar-width: thin;
-    }
-
-    .lifecycle-step {
-        width: 155px;
-    }
-
 }
 
-
-
-/* ==========================================================
-   MOBILE
-========================================================== */
-
-@media (max-width: 600px) {
-
-    .services-hero {
-        min-height: 75vh;
-    }
-
-    .services-intro,
-    .services-list,
-    .services-lifecycle {
-        padding-top: 80px;
+@media (max-width: 640px) {
+    .services-list {
+        padding-top: 105px;
         padding-bottom: 80px;
     }
 
+    .services-category-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 34px;
+    }
+
+    .service-category-content {
+        padding: 22px 20px 24px;
+    }
+
+    .service-category-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .service-category-content ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 0 14px;
+    }
+
+    .service-category-content li {
+        font-size: .81rem;
+    }
+
     .services-cta {
-        padding-top: 90px;
-        padding-bottom: 100px;
+        padding-top: 80px;
+        padding-bottom: 90px;
     }
+}
 
-    .services-grid {
-        margin-top: 45px;
+@media (max-width: 390px) {
+    .service-category-content ul {
+        grid-template-columns: 1fr;
     }
-
-    .service-card {
-        min-height: auto;
-
-        padding: 30px 24px;
-
-        flex-direction: column;
-
-        gap: 16px;
-    }
-
-    .service-number {
-        padding-top: 0;
-    }
-
-    .service-content h3 {
-        font-size: 1.25rem;
-    }
-
-    .service-keywords {
-        margin-top: 20px;
-    }
-
-    .services-lifecycle-line {
-        margin-top: 55px;
-    }
-
 }
